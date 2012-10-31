@@ -8,3 +8,6 @@ gem 'sprockets-sass'
 gem 'coffee-script'
 gem 'sass'
 gem 'pry', group: :development
+gem 'uglifier'
+gem 'yui-compressor'
+gem 'rake'

@@ -12,8 +12,8 @@ class SprocketsApplication < Sinatra::Application
   set :assets_path, File.join(root, 'assets')
 
   configure do
-    sprockets.append_path File.join(root, 'assets', 'images')
-    sprockets.append_path File.join(root, 'assets', 'javascripts')
-    sprockets.append_path File.join(root, 'assets', 'stylesheets')
+    Dir.glob(File.join(root, 'assets', '**/**/')).each do |folder|
+      sprockets.append_path(folder)
+    end
   end
 end
